@@ -50,7 +50,7 @@ class OnBoardingPage2 extends StatelessWidget {
                 SizedBox(height: 16),
                 CustomTextField(),
                 SizedBox(height: 58),
-                FruitPrimaryButton(buttonText: "Start Ordering", onPressed: (){})
+                FruitPrimaryButton(buttonText: "Start Ordering",isFullWidth: true, onPressed: (){})
               ],
             ),
           ),

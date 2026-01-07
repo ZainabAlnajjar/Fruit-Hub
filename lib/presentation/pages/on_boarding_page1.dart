@@ -3,6 +3,7 @@ import 'package:fruit_hub/presentation/components/primary_button.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
+import 'on_boarding_page2.dart';
 
 class OnBoardingPage1 extends StatelessWidget {
 
@@ -58,7 +59,9 @@ class OnBoardingPage1 extends StatelessWidget {
                     ),
                   ),
                 SizedBox(height: 58),
-                FruitPrimaryButton(buttonText: "Let’s Continue", onPressed:(){})
+                FruitPrimaryButton(buttonText: "Let’s Continue",isFullWidth: true, onPressed:(){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingPage2()));
+                })
               ],
             ),
           ),
