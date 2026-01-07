@@ -3,7 +3,6 @@ import 'package:fruit_hub/presentation/components/primary_button.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
-import 'on_boarding_page2.dart';
 
 class OnBoardingPage1 extends StatelessWidget {
 
