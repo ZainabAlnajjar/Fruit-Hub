@@ -3,21 +3,8 @@ import 'package:flutter/material.dart';
 import '../../util/assets.dart';
 import '../../util/colors.dart';
 
-class OnBoardingScreen extends StatelessWidget {
-  final String img;
-  final String welcomeText;
-  final String? welcomeDescription;
-  final String? firstName;
-  final String buttonText;
-
-  const OnBoardingScreen({
-    super.key,
-    required this.img,
-    required this.welcomeText,
-    this.welcomeDescription,
-    this.firstName,
-    required this.buttonText,
-  });
+class OnBoardingPage2 extends StatelessWidget {
+  const OnBoardingPage2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +23,11 @@ class OnBoardingScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right:70),
                   child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Image.asset(Assets.fruitDrops),
+                    alignment: Alignment.centerRight,
+                    child: Image.asset(Assets.fruitDrops),
                   ),
                 ),
-                Image.asset(img,fit: BoxFit.cover),
+                Image.asset(Assets.fruitBasketPage2,fit: BoxFit.cover),
                 SizedBox(height: 8),
                 Image.asset(Assets.fruitBasketPageShadow)
               ],
@@ -52,43 +39,20 @@ class OnBoardingScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  welcomeText,
+                  "What is your firstname?",
                   style: TextStyle(
                     color: Color(FruitColor.navyBlueColor),
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                firstName != null ? SizedBox(height: 16) : SizedBox(height: 8),
-                if (welcomeDescription != null)
-                  Text(
-                    welcomeDescription!,
-                    style: TextStyle(
-                      color: Color(FruitColor.lightNavyBlueColor),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  )
-                else
-                  TextField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.fromLTRB(24, 14, 24, 14),
-                      filled: true,
-                      fillColor: Color(FruitColor.greyColor),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none,
-                      ),
-                      hintText: "First Name",
-                      hintStyle: TextStyle(
-                        color: Color(FruitColor.darkGrayColor),
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
+                SizedBox(height: 16),
+                CustomTextField(),
                 SizedBox(height: 58),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // navigate to home
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(FruitColor.orangeColor),
                     shape: RoundedRectangleBorder(
@@ -99,7 +63,7 @@ class OnBoardingScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 18),
                     child: Center(
                       child: Text(
-                        buttonText,
+                        "Start Ordering",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -113,6 +77,43 @@ class OnBoardingScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CustomTextField extends StatefulWidget {
+  const CustomTextField({super.key});
+
+
+  @override
+  State<CustomTextField> createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
+  String firstName = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      onChanged: (value) {
+        setState(() {
+          firstName = value;
+        });
+      },
+      decoration: InputDecoration(
+        contentPadding: const EdgeInsets.fromLTRB(24, 14, 24, 14),
+        filled: true,
+        fillColor: Color(FruitColor.greyColor),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: BorderSide.none,
+        ),
+        hintText: "First Name",
+        hintStyle: TextStyle(
+          color: Color(FruitColor.darkGrayColor),
+          fontSize: 20,
+        ),
       ),
     );
   }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/presentation/pages/on_boarding.dart';
-import 'package:fruit_hub/util/assets.dart';
+import 'package:fruit_hub/presentation/pages/on_boarding_page1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,12 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "brandonGrotesque",
       ),
-      home: OnBoardingScreen(
-        img: Assets.fruitBasketPage1,
-        welcomeText: "Get The Freshest Fruit Salad Combo",
-        buttonText: 'Let’s Continue',
-        welcomeDescription: "We deliver the best and freshest fruit salad in town. Order for a combo today!!!",
-      ),
+      home: OnBoardingPage1(),
     );
   }
 }
