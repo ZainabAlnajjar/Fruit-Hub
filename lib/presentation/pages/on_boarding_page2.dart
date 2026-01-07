@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/presentation/components/primary_button.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
@@ -49,30 +50,7 @@ class OnBoardingPage2 extends StatelessWidget {
                 SizedBox(height: 16),
                 CustomTextField(),
                 SizedBox(height: 58),
-                ElevatedButton(
-                  onPressed: () {
-                    // navigate to home
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(FruitColor.orangeColor),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 18),
-                    child: Center(
-                      child: Text(
-                        "Start Ordering",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                FruitPrimaryButton(buttonText: "Start Ordering", onPressed: (){})
               ],
             ),
           ),
