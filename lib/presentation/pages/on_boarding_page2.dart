@@ -10,7 +10,6 @@ class OnBoardingPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     final media = MediaQuery.of(context);
     final height = media.size.height;
-    final width = media.size.width;
     return Scaffold(
       body: Column(
         children: [
@@ -28,11 +27,7 @@ class OnBoardingPage2 extends StatelessWidget {
                     child: Image.asset(Assets.fruitDrops),
                   ),
                 ),
-                Image.asset(Assets.fruitBasketPage2,
-                    width: width * 0.5,
-                    height: height * 0.3,
-                    fit: BoxFit.contain
-                ),
+                Image.asset(Assets.fruitBasketPage2,fit: BoxFit.contain),
                 SizedBox(height: 8),
                 Image.asset(Assets.fruitBasketPageShadow)
               ],

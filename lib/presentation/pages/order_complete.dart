@@ -8,9 +8,6 @@ class OrderComplete extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final media = MediaQuery.of(context);
-    final height = media.size.height;
-    final width = media.size.width;
     return Scaffold(
       body: Center(
         child: Column(
@@ -19,8 +16,6 @@ class OrderComplete extends StatelessWidget {
           children: [
             Image.asset(
               Assets.orderComplete,
-              width: width * 0.5,
-              height: height * 0.3,
               fit: BoxFit.contain,
             ),
             SizedBox(height: 48),
