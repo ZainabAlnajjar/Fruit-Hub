@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../util/assets.dart';
+import '../../util/colors.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   final String img;
@@ -28,7 +29,7 @@ class OnBoardingScreen extends StatelessWidget {
           Container(
             width: double.infinity,
             height: height / 1.8,
-            color: Color(0xFFFFA451),
+            color: Color(FruitColor.orangeColor),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -39,7 +40,7 @@ class OnBoardingScreen extends StatelessWidget {
                       child: Image.asset(Assets.fruitDrops),
                   ),
                 ),
-                Image.asset(img),
+                Image.asset(img,fit: BoxFit.cover),
                 SizedBox(height: 8),
                 Image.asset(Assets.fruitBasketPageShadow)
               ],
@@ -53,7 +54,7 @@ class OnBoardingScreen extends StatelessWidget {
                 Text(
                   welcomeText,
                   style: TextStyle(
-                    color: Color(0xFF27214D),
+                    color: Color(FruitColor.navyBlueColor),
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                   ),
@@ -63,7 +64,7 @@ class OnBoardingScreen extends StatelessWidget {
                   Text(
                     welcomeDescription!,
                     style: TextStyle(
-                      color: Color(0xFF5D577E),
+                      color: Color(FruitColor.lightNavyBlueColor),
                       fontSize: 16,
                       fontWeight: FontWeight.w400,
                     ),
@@ -73,14 +74,14 @@ class OnBoardingScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.fromLTRB(24, 14, 24, 14),
                       filled: true,
-                      fillColor: Color(0xFFF3F1F1),
+                      fillColor: Color(FruitColor.greyColor),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide.none,
                       ),
                       hintText: "First Name",
                       hintStyle: TextStyle(
-                        color: Color(0xFFC2BDBD),
+                        color: Color(FruitColor.darkGrayColor),
                         fontSize: 20,
                       ),
                     ),
@@ -89,7 +90,7 @@ class OnBoardingScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFFFA451),
+                    backgroundColor: Color(FruitColor.orangeColor),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
