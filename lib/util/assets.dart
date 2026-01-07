@@ -7,7 +7,5 @@ class Assets {
   static final fruitBasketPage2 = '${baseImage}fruit_basket_page2.png';
   static final fruitDrops = '${baseImage}fruit_drops.png';
   static final fruitBasketPageShadow = '${baseImage}fruit_basket_page_shadow.png';
-  static final fruitShadow = '${baseImage}fruit_shadow.png';
-
 
 }
