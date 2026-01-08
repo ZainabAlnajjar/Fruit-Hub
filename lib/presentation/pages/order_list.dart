@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/presentation/components/order_item.dart';
+import 'package:fruit_hub/presentation/components/primary_button.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
@@ -26,7 +27,6 @@ class OrderList extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(24, 24, 24, 56),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -42,7 +42,8 @@ class OrderList extends StatelessWidget {
                     )
                   ],
                 ),
-                ElevatedButton(onPressed: (){}, child: Text("Checkout")),
+                SizedBox(width: 24,),
+                Expanded(child: FruitPrimaryButton(buttonText: "Checkout", onPressed:(){})),
               ],
             ),
           )
