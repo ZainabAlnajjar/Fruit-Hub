@@ -9,7 +9,7 @@ class OrderItem extends StatelessWidget {
   final String name;
   final String price;
   final String quantity;
-  final int backgroundColor;
+  final Color backgroundColor;
 
   const OrderItem({super.key, required this.img, required this.name, required this.price, required this.quantity, required this.backgroundColor});
 
@@ -17,19 +17,20 @@ class OrderItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
          Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Color(backgroundColor).withValues(alpha: 0.3),
+                color: backgroundColor.withValues(alpha: 0.3),
               ),
-              child: Image.asset(img,width: 64,height:64,fit: BoxFit.cover)
+              child: Image.asset(img,width: 64,height:64,fit: BoxFit.contain)
          ),
         SizedBox(width: 16),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(name,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.black),),
               SizedBox(height: 4,),
@@ -39,9 +40,9 @@ class OrderItem extends StatelessWidget {
         ),
         Row(
           children: [
-            SvgPicture.asset(Assets.priceIcon),
+            SvgPicture.asset(Assets.icon.priceIcon),
             SizedBox(width: 4,),
-            Text(price,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Color(FruitColor.navyBlueColor)),),
+            Text(price,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: FruitColor.navyBlueColor),),
           ],
         )
       ],
