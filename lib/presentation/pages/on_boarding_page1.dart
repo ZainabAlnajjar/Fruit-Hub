@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/presentation/components/primary_button.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
@@ -29,7 +30,7 @@ class OnBoardingPage1 extends StatelessWidget {
                       child: Image.asset(Assets.fruitDrops),
                   ),
                 ),
-                Image.asset(Assets.fruitBasketPage1,fit: BoxFit.cover),
+                Image.asset(Assets.fruitBasketPage1, fit: BoxFit.contain),
                 SizedBox(height: 8),
                 Image.asset(Assets.fruitBasketPageShadow)
               ],
@@ -58,30 +59,9 @@ class OnBoardingPage1 extends StatelessWidget {
                     ),
                   ),
                 SizedBox(height: 58),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingPage2()));
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(FruitColor.orangeColor),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 18),
-                    child: Center(
-                      child: Text(
-                        "Let’s Continue",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                FruitPrimaryButton(buttonText: "Let’s Continue",isFullWidth: true, onPressed:(){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingPage2()));
+                })
               ],
             ),
           ),
