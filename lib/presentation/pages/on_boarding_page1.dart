@@ -19,7 +19,7 @@ class OnBoardingPage1 extends StatelessWidget {
           Container(
             width: double.infinity,
             height: height / 1.8,
-            color: Color(FruitColor.orangeColor),
+            color: FruitColor.orangeColor,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -44,7 +44,7 @@ class OnBoardingPage1 extends StatelessWidget {
                 Text(
                   "Get The Freshest Fruit Salad Combo",
                   style: TextStyle(
-                    color: Color(FruitColor.navyBlueColor),
+                    color: FruitColor.navyBlueColor,
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                   ),
@@ -53,7 +53,7 @@ class OnBoardingPage1 extends StatelessWidget {
                   Text(
                     "We deliver the best and freshest fruit salad in town. Order for a combo today!!!",
                     style: TextStyle(
-                      color: Color(FruitColor.lightNavyBlueColor),
+                      color: FruitColor.lightNavyBlueColor,
                       fontSize: 16,
                       fontWeight: FontWeight.w400,
                     ),

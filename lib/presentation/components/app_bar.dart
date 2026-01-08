@@ -10,7 +10,7 @@ class FruitAbbBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(FruitColor.orangeColor),
+      color: FruitColor.orangeColor,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 56, horizontal: 24),
         child: Row(
@@ -38,7 +38,7 @@ class FruitAbbBar extends StatelessWidget {
                       Text(
                         "Go back",
                         style: TextStyle(
-                          color: Color(FruitColor.navyBlueColor),
+                          color: FruitColor.navyBlueColor,
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                         ),
