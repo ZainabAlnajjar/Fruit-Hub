@@ -25,12 +25,12 @@ class OnBoardingPage2 extends StatelessWidget {
                   padding: const EdgeInsets.only(right:70),
                   child: Align(
                     alignment: Alignment.centerRight,
-                    child: Image.asset(Assets.fruitDrops),
+                    child: Image.asset(Assets.image.fruitDrops),
                   ),
                 ),
-                Image.asset(Assets.fruitBasketPage2,fit: BoxFit.contain),
+                Image.asset(Assets.image.fruitBasketPage2,fit: BoxFit.contain),
                 SizedBox(height: 8),
-                Image.asset(Assets.fruitBasketPageShadow)
+                Image.asset(Assets.image.fruitBasketPageShadow)
               ],
             ),
           ),
