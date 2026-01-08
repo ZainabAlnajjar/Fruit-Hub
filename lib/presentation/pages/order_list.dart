@@ -12,9 +12,9 @@ class OrderList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: FruitAbbBar(title: "My Basket"),
       body: Column(
         children: [
+          FruitAbbBar(title: 'Order List'),
           Expanded(
             child: ListView.builder(itemCount: 10,scrollDirection: Axis.vertical,itemBuilder: (context,index){
               return Padding(
@@ -48,7 +48,6 @@ class OrderList extends StatelessWidget {
           )
         ],
       ),
-
     );
   }
 }
