@@ -17,14 +17,14 @@ class OrderComplete extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              Assets.orderComplete,
+              Assets.image.orderComplete,
               fit: BoxFit.contain,
             ),
             SizedBox(height: 48),
             Text(
               "Congratulations!!!",
               style: TextStyle(
-                color: Color(FruitColor.navyBlueColor),
+                color: FruitColor.navyBlueColor,
                 fontSize: 32,
                 fontWeight: FontWeight.w500,
               ),
@@ -33,7 +33,7 @@ class OrderComplete extends StatelessWidget {
             Text(
               "Your order have been taken and \nis being attended to",
               style: TextStyle(
-                color: Color(FruitColor.navyBlueColor),
+                color: FruitColor.navyBlueColor,
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
               ),
