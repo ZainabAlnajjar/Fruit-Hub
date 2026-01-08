@@ -12,5 +12,7 @@ class Assets {
   //for test order img
   static final orderItem = '${baseImage}order_item.png';
 
+  static final orderComplete = '${baseImage}order_complete.png';
+
 
 }
