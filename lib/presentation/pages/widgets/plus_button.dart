@@ -15,7 +15,7 @@ class PlusButton extends StatelessWidget {
       onTap: onPress,
       child: CircleAvatar(
         radius: 12,
-        backgroundColor: Color(FruitColor.lightOrangeColor),
+        backgroundColor: FruitColor.lightOrangeColor,
         child: SvgPicture.asset(Assets.icon.plus, width: 12, height: 12),
       ),
     );

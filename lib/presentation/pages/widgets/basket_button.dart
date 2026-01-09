@@ -29,7 +29,7 @@ class BasketButton extends StatelessWidget {
               'My basket',
               style: TextStyle(
                 fontSize: 10,
-                color: Color(FruitColor.navyBlueColor),
+                color: FruitColor.navyBlueColor,
               ),
             ),
           ],

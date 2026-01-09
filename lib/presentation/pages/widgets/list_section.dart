@@ -27,7 +27,7 @@ class ListSection<T> extends StatelessWidget {
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w500,
-              color: Color(FruitColor.navyBlueColor),
+              color: FruitColor.navyBlueColor,
             ),
           ),
         ),

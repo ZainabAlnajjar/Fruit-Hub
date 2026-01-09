@@ -19,10 +19,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(FruitColor.backgroundColor),
+      backgroundColor: FruitColor.backgroundColor,
       appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Color(FruitColor.backgroundColor),
+        backgroundColor: FruitColor.backgroundColor,
         elevation: 0,
         leading: SvgPicture.asset(
           Assets.icon.menu,

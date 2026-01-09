@@ -19,7 +19,7 @@ class SearchSection extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Search for fruit salad combos',
                 hintStyle: TextStyle(
-                  color: Color(FruitColor.lightGrayColor),
+                  color: FruitColor.lightGrayColor,
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                 ),
@@ -36,7 +36,7 @@ class SearchSection extends StatelessWidget {
                   bottom: 16,
                 ),
                 filled: true,
-                fillColor: Color(FruitColor.searchFieldBackgroundColor),
+                fillColor: FruitColor.searchFieldBackgroundColor,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
                   borderSide: BorderSide.none,

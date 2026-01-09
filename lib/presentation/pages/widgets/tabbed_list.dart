@@ -25,14 +25,14 @@ class TabbedList<T> extends StatelessWidget {
           Padding(
             padding: EdgeInsetsGeometry.symmetric(horizontal: 24),
             child: TabBar(
-              labelColor: Color(FruitColor.navyBlueColor),
+              labelColor: FruitColor.navyBlueColor,
               labelStyle: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-              unselectedLabelColor: Color(FruitColor.unselectedTabColor),
+              unselectedLabelColor: FruitColor.unselectedTabColor,
               unselectedLabelStyle: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
               ),
-              indicatorColor: Color(FruitColor.orangeColor),
+              indicatorColor: FruitColor.orangeColor,
               indicatorSize: TabBarIndicatorSize.tab,
               dividerHeight: 0,
               tabAlignment: TabAlignment.start,
@@ -42,7 +42,7 @@ class TabbedList<T> extends StatelessWidget {
               indicator: StartAlignedUnderlineIndicator(
                 width: 22,
                 height: 2,
-                color: Color(FruitColor.orangeColor),
+                color: FruitColor.orangeColor,
               ),
               indicatorPadding: const EdgeInsets.symmetric(horizontal: 16),
             ),

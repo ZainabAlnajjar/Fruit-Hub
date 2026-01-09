@@ -20,7 +20,7 @@ class WelcomeText extends StatelessWidget {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: Color(FruitColor.navyBlueColor),
+                color: FruitColor.navyBlueColor,
               ),
             ),
             TextSpan(
@@ -28,7 +28,7 @@ class WelcomeText extends StatelessWidget {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
-                color: Color(FruitColor.navyBlueColor),
+                color: FruitColor.navyBlueColor,
               ),
             ),
           ],

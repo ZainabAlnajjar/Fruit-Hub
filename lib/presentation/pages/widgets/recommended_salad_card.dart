@@ -90,7 +90,7 @@ class RecommendedSaladCard extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
-                                  color: Color(FruitColor.orangeColor),
+                                  color: FruitColor.orangeColor,
                                 ),
                               ),
                             ],
