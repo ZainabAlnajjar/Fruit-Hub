@@ -17,7 +17,7 @@ class OrderComplete extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              Assets.orderComplete,
+              Assets.image.orderComplete,
               fit: BoxFit.contain,
             ),
             SizedBox(height: 48),

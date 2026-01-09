@@ -7,4 +7,8 @@ class FruitColor{
   static final int lightNavyBlueColor = 0xFF5D577E;
   static final int greyColor = 0xFFF3F1F1;
   static final int darkGrayColor = 0xFFC2BDBD;
+  static final int lightGrayColor = 0xFF86869E;
+  static final int searchFieldBackgroundColor = 0xFFF3F4F9;
+  static final int unselectedTabColor = 0xFF938DB5;
+  static final int backgroundColor = 0xFFFDFDFD;
 }
