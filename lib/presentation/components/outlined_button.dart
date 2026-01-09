@@ -26,7 +26,7 @@ class FruitOutlinedButton extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 32),
+        padding: const EdgeInsets.symmetric(vertical: 18),
         child: Text(
           buttonText,
           style: TextStyle(

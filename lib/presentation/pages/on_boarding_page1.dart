@@ -14,6 +14,7 @@ class OnBoardingPage1 extends StatelessWidget {
     final media = MediaQuery.of(context);
     final height = media.size.height;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Container(
