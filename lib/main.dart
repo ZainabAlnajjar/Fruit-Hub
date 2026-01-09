@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/presentation/pages/on_boarding_page1.dart';
-import 'package:fruit_hub/presentation/pages/order_status.dart';
 
 void main() {
   runApp(const MyApp());
