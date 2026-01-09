@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/presentation/components/outlined_button.dart';
-import 'package:fruit_hub/presentation/components/primary_button.dart';
+import 'package:fruit_hub/presentation/pages/home.dart';
+import 'package:fruit_hub/presentation/pages/order_status.dart';
+import 'package:fruit_hub/presentation/pages/widgets/outlined_button.dart';
+import 'package:fruit_hub/presentation/pages/widgets/primary_button.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
 
-class OrderComplete extends StatelessWidget {
-  const OrderComplete({super.key});
+class OrderCompleteScreen extends StatelessWidget {
+  const OrderCompleteScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +43,13 @@ class OrderComplete extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 58),
-            FruitPrimaryButton(buttonText: "Track order", onPressed:(){}),
+            FruitPrimaryButton(buttonText: "Track order", onPressed:(){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => OrderStatusScreen()));
+            }),
             SizedBox(height: 48),
-            FruitOutlinedButton(buttonText: "Continue shopping",onPressed:(){}),
+            FruitOutlinedButton(buttonText: "Continue shopping",onPressed:(){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+            }),
           ],
         ),
       ),

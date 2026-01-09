@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/presentation/components/primary_button.dart';
-import 'package:fruit_hub/presentation/components/text_field.dart';
+import 'package:fruit_hub/presentation/pages/widgets/primary_button.dart';
+import 'package:fruit_hub/presentation/pages/widgets/text_field.dart';
 
-import '../../util/colors.dart';
+import '../../../util/colors.dart';
 
 class CardPaymentBottomSheet extends StatelessWidget {
   const CardPaymentBottomSheet({super.key});
