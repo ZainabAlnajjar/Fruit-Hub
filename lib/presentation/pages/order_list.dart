@@ -6,6 +6,7 @@ import 'package:fruit_hub/presentation/components/primary_button.dart';
 import '../../util/assets.dart';
 import '../../util/colors.dart';
 import '../components/app_bar.dart';
+import '../components/checkout_bottom_sheet.dart';
 import '../state/fake_data.dart';
 
 class OrderList extends StatelessWidget {
@@ -14,6 +15,7 @@ class OrderList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           FruitAbbBar(title: 'Order List'),
@@ -75,7 +77,15 @@ class OrderList extends StatelessWidget {
                 Expanded(
                   child: FruitPrimaryButton(
                     buttonText: "Checkout",
-                    onPressed: () {},
+                    onPressed: () {
+                      showModalBottomSheet(
+                          context: context,
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          builder: (context){
+                        return CheckOutBottomSheet();
+                      });
+                    },
                   ),
                 ),
               ],

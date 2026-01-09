@@ -4,6 +4,7 @@ import 'package:fruit_hub/presentation/pages/home.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
+import '../components/text_field.dart';
 
 class OnBoardingPage2 extends StatelessWidget {
   const OnBoardingPage2({super.key});
@@ -13,6 +14,7 @@ class OnBoardingPage2 extends StatelessWidget {
     final media = MediaQuery.of(context);
     final height = media.size.height;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           Container(
@@ -49,7 +51,7 @@ class OnBoardingPage2 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16),
-                CustomTextField(),
+                CustomTextField(hint: "First Name"),
                 SizedBox(height: 58),
                 FruitPrimaryButton(buttonText: "Start Ordering",isFullWidth: true, onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
@@ -58,43 +60,6 @@ class OnBoardingPage2 extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class CustomTextField extends StatefulWidget {
-  const CustomTextField({super.key});
-
-
-  @override
-  State<CustomTextField> createState() => _CustomTextFieldState();
-}
-
-class _CustomTextFieldState extends State<CustomTextField> {
-  String firstName = "";
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      onChanged: (value) {
-        setState(() {
-          firstName = value;
-        });
-      },
-      decoration: InputDecoration(
-        contentPadding: const EdgeInsets.fromLTRB(24, 14, 24, 14),
-        filled: true,
-        fillColor: FruitColor.greyColor,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide.none,
-        ),
-        hintText: "First Name",
-        hintStyle: TextStyle(
-          color: FruitColor.darkGrayColor,
-          fontSize: 20,
-        ),
       ),
     );
   }

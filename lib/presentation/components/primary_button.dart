@@ -25,7 +25,7 @@ class FruitPrimaryButton extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 18, horizontal: 32),
+          padding: EdgeInsets.symmetric(vertical: 18),
           child: Text(
             buttonText,
             style: TextStyle(
