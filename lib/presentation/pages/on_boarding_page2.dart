@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/presentation/components/primary_button.dart';
+import 'package:fruit_hub/presentation/pages/home.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
@@ -50,7 +51,9 @@ class OnBoardingPage2 extends StatelessWidget {
                 SizedBox(height: 16),
                 CustomTextField(),
                 SizedBox(height: 58),
-                FruitPrimaryButton(buttonText: "Start Ordering",isFullWidth: true, onPressed: (){})
+                FruitPrimaryButton(buttonText: "Start Ordering",isFullWidth: true, onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                })
               ],
             ),
           ),

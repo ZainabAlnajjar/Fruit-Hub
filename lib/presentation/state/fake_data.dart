@@ -136,3 +136,110 @@ final List<FruitSalad> fruitSalads = [
         'If you want a fruit salad rich in flavor and antioxidants, this berry blast is perfect for a healthy treat.',
   ),
 ];
+
+final List<FruitSalad> recommendedCombos = [
+  FruitSalad(
+    name: 'Honey lime combo',
+    price: 2000,
+    image: Assets.image.fruitSaladHoneyLimeCombo,
+  ),
+  FruitSalad(
+    name: 'Berry mango combo',
+    price: 8000,
+    image: Assets.image.fruitSaladBerryMangoCombo,
+  ),
+  FruitSalad(
+    name: 'Honey lime combo',
+    price: 2000,
+    image: Assets.image.fruitSaladHoneyLimeCombo,
+  ),
+  FruitSalad(
+    name: 'Berry mango combo',
+    price: 8000,
+    image: Assets.image.fruitSaladBerryMangoCombo,
+  ),
+  FruitSalad(
+    name: 'Honey lime combo',
+    price: 2000,
+    image: Assets.image.fruitSaladHoneyLimeCombo,
+  ),
+  FruitSalad(
+    name: 'Berry mango combo',
+    price: 8000,
+    image: Assets.image.fruitSaladBerryMangoCombo,
+  ),
+  FruitSalad(
+    name: 'Honey lime combo',
+    price: 2000,
+    image: Assets.image.fruitSaladHoneyLimeCombo,
+  ),
+  FruitSalad(
+    name: 'Berry mango combo',
+    price: 8000,
+    image: Assets.image.fruitSaladBerryMangoCombo,
+  ),
+  FruitSalad(
+    name: 'Honey lime combo',
+    price: 2000,
+    image: Assets.image.fruitSaladHoneyLimeCombo,
+  ),
+  FruitSalad(
+    name: 'Berry mango combo',
+    price: 8000,
+    image: Assets.image.fruitSaladBerryMangoCombo,
+  ),
+];
+
+final List<FruitSalad> hottestCombos = fruitSalads;
+
+final List<FruitSalad> topCombos = [
+  FruitSalad(
+    name: 'Quinoa fruit salad',
+    price: 10000,
+    image: Assets.image.fruitSaladQuinoa,
+  ),
+  FruitSalad(
+    name: 'Tropical fruit salad',
+    price: 10000,
+    image: Assets.image.fruitSaladTropical,
+  ),
+  FruitSalad(
+    name: 'Melon fruit salad',
+    price: 10000,
+    image: Assets.image.fruitSaladMelon,
+  ),
+];
+final List<FruitSalad> popularCombos = [
+  FruitSalad(
+    name: 'Quinoa fruit salad',
+    price: 10000,
+    image: Assets.image.fruitSaladQuinoa,
+  ),
+  FruitSalad(
+    name: 'Tropical fruit salad',
+    price: 10000,
+    image: Assets.image.fruitSaladTropical,
+  ),
+  FruitSalad(
+    name: 'Melon fruit salad',
+    price: 10000,
+    image: Assets.image.fruitSaladMelon,
+  ),
+];
+final List<FruitSalad> newCombos = [
+  FruitSalad(
+    name: 'Quinoa fruit salad',
+    price: 10000,
+    image: Assets.image.fruitSaladQuinoa,
+  ),
+  FruitSalad(
+    name: 'Tropical fruit salad',
+    price: 10000,
+    image: Assets.image.fruitSaladTropical,
+  ),
+  FruitSalad(
+    name: 'Melon fruit salad',
+    price: 10000,
+    image: Assets.image.fruitSaladMelon,
+  ),
+];
