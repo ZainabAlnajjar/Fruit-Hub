@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit_hub/presentation/pages/order_list.dart';
 import 'package:fruit_hub/util/assets.dart';
 
 import '../../util/colors.dart';
@@ -33,7 +34,7 @@ class HomeScreen extends StatelessWidget {
         actions: [
           BasketButton(
             onPress: () {
-              //   TODO: Navigate to basket list screen
+              Navigator.push(context, MaterialPageRoute(builder: (context) => OrderList()));
             },
           ),
         ],

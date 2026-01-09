@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/presentation/pages/order_list.dart';
+import 'package:fruit_hub/presentation/pages/on_boarding_page1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "brandonGrotesque",
       ),
-      home: OrderList(),
+      home: OnBoardingPage1(),
     );
   }
 }
