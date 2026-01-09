@@ -18,7 +18,8 @@ class FruitPrimaryButton extends StatelessWidget {
           onPressed();
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Color(FruitColor.orangeColor),
+          elevation: 0,
+          backgroundColor: FruitColor.orangeColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),

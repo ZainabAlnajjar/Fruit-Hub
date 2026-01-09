@@ -15,11 +15,12 @@ class FruitOutlinedButton extends StatelessWidget {
         onPressed();
       },
       style: ElevatedButton.styleFrom(
+        elevation: 0,
         backgroundColor: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
           side: BorderSide(
-            color: Color(FruitColor.orangeColor),
+            color: FruitColor.orangeColor,
             width: 1,
           ),
         ),
@@ -29,7 +30,7 @@ class FruitOutlinedButton extends StatelessWidget {
         child: Text(
           buttonText,
           style: TextStyle(
-            color: Color(FruitColor.orangeColor),
+            color: FruitColor.orangeColor,
             fontSize: 16,
             fontWeight: FontWeight.w500,
           ),

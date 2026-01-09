@@ -18,7 +18,7 @@ class OnBoardingPage2 extends StatelessWidget {
           Container(
             width: double.infinity,
             height: height / 1.8,
-            color: Color(FruitColor.orangeColor),
+            color: FruitColor.orangeColor,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -43,7 +43,7 @@ class OnBoardingPage2 extends StatelessWidget {
                 Text(
                   "What is your firstname?",
                   style: TextStyle(
-                    color: Color(FruitColor.navyBlueColor),
+                    color: FruitColor.navyBlueColor,
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
                   ),
@@ -85,14 +85,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.fromLTRB(24, 14, 24, 14),
         filled: true,
-        fillColor: Color(FruitColor.greyColor),
+        fillColor: FruitColor.greyColor,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide.none,
         ),
         hintText: "First Name",
         hintStyle: TextStyle(
-          color: Color(FruitColor.darkGrayColor),
+          color: FruitColor.darkGrayColor,
           fontSize: 20,
         ),
       ),

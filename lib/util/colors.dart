@@ -1,14 +1,15 @@
+import 'dart:ui';
 
 class FruitColor{
 
-  static final int orangeColor = 0xFFFFA451 ;
-  static final int lightOrangeColor = 0xFFFFF2E7 ;
-  static final int navyBlueColor = 0xFF27214D;
-  static final int lightNavyBlueColor = 0xFF5D577E;
-  static final int greyColor = 0xFFF3F1F1;
-  static final int darkGrayColor = 0xFFC2BDBD;
-  static final int lightGrayColor = 0xFF86869E;
-  static final int searchFieldBackgroundColor = 0xFFF3F4F9;
-  static final int unselectedTabColor = 0xFF938DB5;
-  static final int backgroundColor = 0xFFFDFDFD;
+  static final Color orangeColor = Color(0xFFFFA451) ;
+  static final Color lightOrangeColor = Color(0xFFFFF2E7);
+  static final Color navyBlueColor = Color(0xFF27214D);
+  static final Color lightNavyBlueColor = Color(0xFF5D577E);
+  static final Color greyColor = Color(0xFFF3F1F1);
+  static final Color darkGrayColor = Color(0xFFC2BDBD);
+  static final Color lightGrayColor = Color(0xFF86869E);
+  static final Color searchFieldBackgroundColor = Color(0xFFF3F4F9);
+  static final Color unselectedTabColor = Color(0xFF938DB5);
+  static final Color backgroundColor = Color(0xFFFDFDFD);
 }
