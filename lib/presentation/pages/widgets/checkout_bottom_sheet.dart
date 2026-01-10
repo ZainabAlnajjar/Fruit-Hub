@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/presentation/pages/order_complete.dart';
 import 'package:fruit_hub/presentation/pages/widgets/text_field.dart';
 
 import '../../../util/colors.dart';
-import '../../cubit/order_list/order_list_cubit.dart';
 import 'card_payment_bottom_sheet.dart';
 import 'outlined_button.dart';
 
