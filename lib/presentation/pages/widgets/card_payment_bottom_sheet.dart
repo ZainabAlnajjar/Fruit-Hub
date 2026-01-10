@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub/presentation/pages/widgets/primary_button.dart';
 import 'package:fruit_hub/presentation/pages/widgets/text_field.dart';
 
 import '../../../util/colors.dart';
+import '../../cubit/order_list/order_list_cubit.dart';
 
 class CardPaymentBottomSheet extends StatelessWidget {
   const CardPaymentBottomSheet({super.key});
@@ -111,7 +113,10 @@ class CardPaymentBottomSheet extends StatelessWidget {
                         width: double.infinity,
                         child: FruitPrimaryButton(
                           buttonText: "Complete Order",
-                          onPressed: () {},
+                          onPressed: () {
+                            context.read<OrderListCubit>().deleteCart();
+                            Navigator.pop(context);
+                          },
                         ),
                       ),
                     ],
