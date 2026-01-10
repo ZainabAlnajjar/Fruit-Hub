@@ -4,6 +4,7 @@ import '../data/database/database.dart';
 import '../data/repository/salad_repository.dart';
 import '../domain/repository/salad_repository.dart';
 import '../presentation/cubit/home/home_cubit.dart';
+import '../presentation/cubit/order_list/order_list_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -15,4 +16,5 @@ Future<void> initDI() async {
   );
 
   getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt<SaladRepository>()));
+  getIt.registerFactory<OrderListCubit>(() => OrderListCubit(repository: getIt<SaladRepository>()));
 }

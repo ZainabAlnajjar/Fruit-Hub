@@ -40,8 +40,21 @@ class FruitHupDatabase {
       )
     ''');
 
+    await db.execute('''
+      CREATE TABLE cart (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        cartItem TEXT,
+        totalPrice INTEGER
+      )
+    ''');
+
     for (final salad in fakeSalads) {
       await db.insert('salads', salad.toMap());
     }
+
+    // fake cart data
+    await db.insert('cart', fakeCart.toMap());
+
   }
 }
+
