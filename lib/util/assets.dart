@@ -46,5 +46,5 @@ class _Icons {
   final String moneyType = '${Assets._baseIcon}ic_money_type.svg';
   final String plus = '${Assets._baseIcon}ic_plus.svg';
   final priceIcon = '${Assets._baseIcon}price.svg';
-
+  final back = '${Assets._baseIcon}ic_back.svg';
 }
