@@ -27,15 +27,9 @@ class HomeCubit extends Cubit<HomeState> {
         tabData[category] = salads;
       }
 
-      final otherCategories = SaladCategory.values.where(
-        (c) => !tabCategories.contains(c),
+      List<Salad> recommendedSectionData = await repository.getSaladsByCategory(
+        SaladCategory.recommended,
       );
-
-      List<Salad> recommendedSectionData = const [];
-      for (var category in otherCategories) {
-        final salads = await repository.getSaladsByCategory(category);
-        recommendedSectionData = salads;
-      }
 
       emit(
         HomeLoaded(
