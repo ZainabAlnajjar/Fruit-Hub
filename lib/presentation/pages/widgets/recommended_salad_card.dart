@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../domain/models/salad.dart';
 import '../../../util/assets.dart';
 import '../../../util/colors.dart';
-import '../../state/fruit_salad.dart';
 import 'plus_button.dart';
 
 class RecommendedSaladCard extends StatelessWidget {
-  final FruitSalad salad;
+  final Salad salad;
   final VoidCallback? onPress;
   final VoidCallback? onPlusClick;
 
