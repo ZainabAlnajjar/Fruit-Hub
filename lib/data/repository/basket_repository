@@ -35,16 +35,6 @@ class BasketRepositoryImpl implements BasketRepository {
   }
 
   @override
-  Future<void> removeFromBasket(int id) async {
-    final db = await database.database;
-    await db.delete(
-      'basket',
-      where: 'id = ?',
-      whereArgs: [id],
-    );
-  }
-
-  @override
   Future<List<BasketItem>> getBasketItems() async {
     final db = await database.database;
     final result = await db.query('basket');
