@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub/presentation/pages/widgets/action_row.dart';
 import 'package:fruit_hub/presentation/pages/widgets/details_image.dart';
 import 'package:fruit_hub/presentation/pages/widgets/go_back_button.dart';
+import 'package:fruit_hub/presentation/pages/widgets/price_row.dart';
 import 'package:fruit_hub/util/assets.dart';
 import '../../util/colors.dart';
 
@@ -65,75 +67,9 @@ class ProductDetails extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(
-                        height: 32,
-                      ), // TODO: Check spacing from design
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              GestureDetector(
-                                onTap: () {
-                                  // TODO
-                                },
-                                child: Container(
-                                  width: 32,
-                                  height: 32,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                      color: Color(0xff333333),
-                                      width: 1,
-                                    ),
-                                  ),
-                                  child: Icon(
-                                    Icons.remove,
-                                    size: 16,
-                                    color: Color(0xff333333),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(width: 24),
-                              Text(
-                                '1',
-                                style: TextStyle(
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w400,
-                                  color: FruitColor.navyBlueColor,
-                                ),
-                              ),
-                              const SizedBox(width: 24),
-                              GestureDetector(
-                                onTap: () {
-                                  // TODO
-                                },
-                                child: Container(
-                                  width: 32,
-                                  height: 32,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: FruitColor.lightOrangeColor,
-                                  ),
-                                  child: Icon(
-                                    Icons.add,
-                                    size: 16,
-                                    color: FruitColor.orangeColor,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-
-                          Text(
-                            '₦ 2,000',
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w500,
-                              color: FruitColor.navyBlueColor,
-                            ),
-                          ),
-                        ],
+                        height: 32
                       ),
+                      PriceRow(),
                       const SizedBox(height: 32),
                       Divider(color: Color(0xffF3F3F3), thickness: 1),
                       const SizedBox(height: 32),
@@ -177,56 +113,7 @@ class ProductDetails extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 40),
-                      Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Row(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                // TODO: Toggle favorite
-                              },
-                              child: Container(
-                                width: 48,
-                                height: 48,
-                                decoration: BoxDecoration(
-                                  color: FruitColor.lightOrangeColor,
-                                  borderRadius: BorderRadius.circular(100),
-                                ),
-                                child: Icon(
-                                  Icons.favorite_border,
-                                  color: FruitColor.orangeColor,
-                                  size: 24,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(width: 60),
-                            Expanded(
-                              child: GestureDetector(
-                                onTap: () {
-                                  // TODO
-                                },
-                                child: Container(
-                                  height: 56,
-                                  decoration: BoxDecoration(
-                                    color: FruitColor.orangeColor,
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  child: const Center(
-                                    child: Text(
-                                      'Add to basket',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      ActionRow(),
                       const SizedBox(height: 4),
                     ],
                   ),
