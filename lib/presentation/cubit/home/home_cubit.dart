@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_hub/domain/repository/basket_repository.dart';
 import 'package:fruit_hub/presentation/cubit/home/home_state.dart';
 
 import '../../../domain/models/salad.dart';
@@ -7,8 +8,9 @@ import '../../../domain/repository/salad_repository.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   final SaladRepository repository;
+  final BasketRepository basketRepository;
 
-  HomeCubit(this.repository) : super(HomeInitial());
+  HomeCubit({required this.repository, required this.basketRepository}) : super(HomeInitial());
 
   Future<void> loadSalads() async {
     emit(HomeLoading());
@@ -38,6 +40,14 @@ class HomeCubit extends Cubit<HomeState> {
         ),
       );
     } catch (e) {
+      emit(HomeError(message: e.toString()));
+    }
+  }
+
+  Future<void> addToCart(int saladId, int quantity)async {
+    try{
+      await basketRepository.addToBasket(saladId:saladId , quantity: quantity);
+    }catch(e){
       emit(HomeError(message: e.toString()));
     }
   }

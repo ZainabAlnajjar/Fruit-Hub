@@ -1,7 +1,5 @@
 import '../../util/assets.dart';
 import '../../domain/models/salad.dart';
-import '../domain/models/cart.dart';
-import '../domain/models/cart_item.dart';
 import '../domain/models/salad_categories.dart';
 
 final List<Salad> fakeSalads = [
@@ -185,35 +183,3 @@ class SaladColors {
   static const green = 0xFFE9F6FB;
   static const orange = 0xFFFFE5D0;
 }
-
-
-final Cart fakeCart=Cart(
-   id: 1,
-  cartItem: [
-    CartItem(
-      id: 1,
-      name: 'Greek Salad',
-      price: 50,
-      image: 'assets/images/greek_salad.png',
-      color: 0xFFE8F5E9,
-      quantity: 2,
-    ),
-    CartItem(
-      id: 2,
-      name: 'Caesar Salad',
-      price: 60,
-      image: 'assets/images/caesar_salad.png',
-      color: 0xFFFFF3E0,
-      quantity: 1,
-    ),
-    CartItem(
-      id: 3,
-      name: 'Fruit Salad',
-      price: 40,
-      image: 'assets/images/fruit_salad.png',
-      color: 0xFFE3F2FD,
-      quantity: 3,
-    ),
-  ],
-  totalPrice: 50000
-);

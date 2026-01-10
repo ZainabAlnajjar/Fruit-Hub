@@ -1,32 +1,22 @@
-import 'dart:convert';
-
-import 'package:fruit_hub/domain/models/cart_item.dart';
+import 'package:fruit_hub/domain/models/salad.dart';
 
 class Cart {
+  final Salad salad;
+  final int quantity;
 
-  final int? id;
-  final List<CartItem>? cartItem;
-  final int? totalPrice;
+  Cart({required this.salad, required this.quantity});
 
-  Cart({this.id, this.cartItem, this.totalPrice});
-
-
-  Map<String, dynamic> toMap(){
-    return {
-      'id': id,
-      'cartItem': jsonEncode(cartItem?.map((e) => e.toMap()).toList()),
-      'totalPrice': totalPrice,
-    };
+  factory Cart.fromMap(Map<String, dynamic> map) {
+    return Cart(
+      salad: Salad.fromMap(map),
+      quantity: map['quantity'],
+    );
   }
 
-  factory Cart.fromMap(Map<String, dynamic> map){
-    return Cart(
-        id: map['id'],
-        cartItem: (jsonDecode(map['cartItem']) as List)
-        .map((e) => CartItem.fromMap(e))
-        .toList(),
-        totalPrice: map['totalPrice'],
-    );
+  Map<String, dynamic> toMap() {
+    final saladMap = salad.toMap();
+    saladMap['quantity'] = quantity;
+    return saladMap;
   }
 
 }

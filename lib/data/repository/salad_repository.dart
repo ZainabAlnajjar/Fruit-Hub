@@ -1,5 +1,3 @@
-import 'package:fruit_hub/domain/models/cart.dart';
-import 'package:sqflite/sqflite.dart';
 
 import '../../../domain/models/salad.dart';
 import '../../domain/models/salad_categories.dart';
@@ -47,33 +45,6 @@ class SaladRepositoryImpl implements SaladRepository {
     );
 
     return result.map(Salad.fromMap).toList();
-  }
-
-  @override
-  Future<Cart> getCartItems() async {
-    final db = await database.database;
-    final result = await db.query('cart');
-
-    if (result.isNotEmpty) {
-      return Cart.fromMap(result.first);
-    } else {
-      return Cart(cartItem: [], totalPrice: 0);
-    }
-  }
-
-  @override
-  Future<void> addToCart(int id, int quantity) async {
-    // final db = await database.database;
-    // final salad = await getSaladById(id);
-
-
-  }
-
-
-  @override
-  Future<void> deleteCart()async{
-    final db = await database.database;
-    await db.delete('cart');
   }
 
 }
