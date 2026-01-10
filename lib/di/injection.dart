@@ -8,7 +8,7 @@ import '../presentation/cubit/home/home_cubit.dart';
 final getIt = GetIt.instance;
 
 Future<void> initDI() async {
-  getIt.registerLazySingleton<SaladDatabase>(() => SaladDatabase.instance);
+  getIt.registerLazySingleton<FruitHupDatabase>(() => FruitHupDatabase.instance);
 
   getIt.registerLazySingleton<SaladRepository>(
     () => SaladRepositoryImpl(getIt()),

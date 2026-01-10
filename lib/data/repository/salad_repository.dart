@@ -4,7 +4,7 @@ import '../database/database.dart';
 import '../../../domain/repository/salad_repository.dart';
 
 class SaladRepositoryImpl implements SaladRepository {
-  final SaladDatabase database;
+  final FruitHupDatabase database;
 
   SaladRepositoryImpl(this.database);
 

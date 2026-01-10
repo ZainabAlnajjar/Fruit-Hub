@@ -3,11 +3,11 @@ import 'package:path/path.dart';
 
 import '../fake_data.dart';
 
-class SaladDatabase {
-  static final SaladDatabase instance = SaladDatabase._internal();
+class FruitHupDatabase {
+  static final FruitHupDatabase instance = FruitHupDatabase._internal();
   static Database? _database;
 
-  SaladDatabase._internal();
+  FruitHupDatabase._internal();
 
   Future<Database> get database async {
     if (_database != null) return _database!;
