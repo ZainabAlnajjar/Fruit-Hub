@@ -26,17 +26,13 @@ class ProductDetails extends StatelessWidget {
           bottom: false,
           child: BlocConsumer<DetailsCubit, DetailsState>(
             listener: (context, state) {
-              if (state is DetailsLoaded) {
-                
-              }
+              if (state is DetailsLoaded) {}
             },
             builder: (context, state) {
               switch (state) {
                 case DetailsLoading():
                   return const Center(
-                    child: CircularProgressIndicator(
-                      color: Colors.white,
-                    ),
+                    child: CircularProgressIndicator(color: Colors.white),
                   );
 
                 case DetailsLoaded():
@@ -92,12 +88,7 @@ class ProductDetailsContent extends StatelessWidget {
                 children: [
                   GoBackButton(),
                   const SizedBox(height: 10),
-                  DetailsImage(
-                    Image.asset(
-                      salad.image,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+                  DetailsImage(Image.asset(salad.image, fit: BoxFit.cover)),
                   const SizedBox(height: 32),
                 ],
               ),
@@ -188,7 +179,32 @@ class ProductDetailsContent extends StatelessWidget {
                   ],
                   ActionRow(
                     isFavorite: state.isFavorite,
-                    onFavoriteToggle: () => cubit.toggleFavorite(),
+                    onFavoriteToggle: () async {
+                      try {
+                        await cubit.toggleFavorite();
+                        if (context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                '${salad.name} added to favorites!',
+                              ),
+                              duration: const Duration(seconds: 2),
+                              backgroundColor: FruitColor.orangeColor,
+                            ),
+                          );
+                        }
+                      } catch (e) {
+                        if (context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('Failed to add to favorites'),
+                              duration: Duration(seconds: 2),
+                              backgroundColor: Colors.red,
+                            ),
+                          );
+                        }
+                      }
+                    },
                     onAddToBasket: () async {
                       try {
                         await cubit.addToBasket();
