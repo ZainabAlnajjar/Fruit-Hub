@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../util/colors.dart';
+import '../../../util/colors.dart';
 
 class FruitAbbBar extends StatelessWidget {
   final String title;
@@ -28,8 +28,8 @@ class FruitAbbBar extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 8,
+                    horizontal: 6,
+                    vertical: 6,
                   ),
                   child: Row(
                     children: [

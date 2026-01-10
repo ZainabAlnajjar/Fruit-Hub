@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/presentation/components/card_payment_bottom_sheet.dart';
-import 'package:fruit_hub/presentation/components/outlined_button.dart';
-import 'package:fruit_hub/presentation/components/text_field.dart';
+import 'package:fruit_hub/presentation/pages/order_complete.dart';
+import 'package:fruit_hub/presentation/pages/widgets/text_field.dart';
 
-import '../../util/colors.dart';
+import '../../../util/colors.dart';
+import 'card_payment_bottom_sheet.dart';
+import 'outlined_button.dart';
 
 class CheckOutBottomSheet extends StatelessWidget {
   const CheckOutBottomSheet({super.key});
@@ -72,13 +73,15 @@ class CheckOutBottomSheet extends StatelessWidget {
                         children: [
                           FruitOutlinedButton(
                             buttonText: "Pay on delivery",
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pop(context);
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OrderCompleteScreen()));
+                            },
                           ),
                           FruitOutlinedButton(
                             buttonText: "Pay with card",
                             onPressed: () {
                               Navigator.pop(context);
-                              
                               showModalBottomSheet(
                                 context: context,
                                 isScrollControlled: true,

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "brandonGrotesque",
       ),
-      home: OnBoardingPage1(),
+      home: const OnBoardingPage1(),
     );
   }
 }

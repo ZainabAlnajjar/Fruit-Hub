@@ -31,8 +31,16 @@ class _Images {
       '${Assets._baseImage}fruit_salad_quinoa.png';
   final String fruitSaladTropical =
       '${Assets._baseImage}fruit_salad_tropical.png';
-  final orderComplete = '${Assets._baseImage}order_complete.png';
-  final splashLogo = '${Assets._baseImage}splash_logo.png';
+  final String splashLogo = '${Assets._baseImage}splash_logo.png';
+  final String orderComplete = '${Assets._baseImage}order_complete.png';
+  final String orderTaken = '${Assets._baseImage}order_taken.png';
+  final String orderDelivered = '${Assets._baseImage}order_delivered.png';
+  final String orderReceived = '${Assets._baseImage}order_received.png';
+  final String orderPrepared = '${Assets._baseImage}order_prepared.png';
+  final String phone = '${Assets._baseImage}phone.png';
+  final String loading = '${Assets._baseImage}loading.png';
+  final String map = '${Assets._baseImage}map.png';
+
 }
 
 
@@ -46,6 +54,6 @@ class _Icons {
   final String menu = '${Assets._baseIcon}ic_menu.svg';
   final String moneyType = '${Assets._baseIcon}ic_money_type.svg';
   final String plus = '${Assets._baseIcon}ic_plus.svg';
-  final priceIcon = '${Assets._baseIcon}price.svg';
+  final String priceIcon = '${Assets._baseIcon}price.svg';
 
 }

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fruit_hub/presentation/components/order_item.dart';
-import 'package:fruit_hub/presentation/components/primary_button.dart';
+import 'package:fruit_hub/presentation/pages/widgets/app_bar.dart';
+import 'package:fruit_hub/presentation/pages/widgets/checkout_bottom_sheet.dart';
+import 'package:fruit_hub/presentation/pages/widgets/order_item.dart';
+import 'package:fruit_hub/presentation/pages/widgets/primary_button.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
-import '../components/app_bar.dart';
-import '../components/checkout_bottom_sheet.dart';
 import '../state/fake_data.dart';
 
-class OrderList extends StatelessWidget {
-  const OrderList({super.key});
+class OrderListScreen extends StatelessWidget {
+  const OrderListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
