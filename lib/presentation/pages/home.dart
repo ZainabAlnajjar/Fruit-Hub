@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/presentation/pages/order_list.dart';
+import 'package:fruit_hub/presentation/pages/product_details.dart';
 import 'package:fruit_hub/util/assets.dart';
 
 import '../../di/injection.dart';
@@ -110,7 +111,12 @@ class HomeContent extends StatelessWidget {
             itemBuilder: (salad) => RecommendedSaladCard(
               salad: salad,
               onPress: () {
-                //   TODO: Navigate to details screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProductDetails(saladId: salad.id!),
+                  ),
+                );
               },
               onPlusClick: () {
                 //   TODO: Add to basket
@@ -126,7 +132,12 @@ class HomeContent extends StatelessWidget {
             itemBuilder: (salad) => ColorfulSaladCard(
               salad: salad,
               onPress: () {
-                //   TODO: Navigate to details screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProductDetails(saladId: salad.id!),
+                  ),
+                );
               },
               onPlusClick: () {
                 //   TODO: Add to basket

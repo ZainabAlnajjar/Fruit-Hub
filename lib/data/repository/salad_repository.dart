@@ -33,6 +33,7 @@ class SaladRepositoryImpl implements SaladRepository {
     return null;
   }
 
+  @override
   Future<List<Salad>> getSaladsByCategory(SaladCategory category) async {
     final db = await database.database;
 

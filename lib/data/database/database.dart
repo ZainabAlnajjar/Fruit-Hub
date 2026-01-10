@@ -40,6 +40,23 @@ class FruitHupDatabase {
       )
     ''');
 
+    await db.execute('''
+      CREATE TABLE basket (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        salad_id INTEGER NOT NULL,
+        quantity INTEGER NOT NULL,
+        FOREIGN KEY (salad_id) REFERENCES salads (id)
+      )
+    ''');
+
+    await db.execute('''
+      CREATE TABLE favorites (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        salad_id INTEGER NOT NULL UNIQUE,
+        FOREIGN KEY (salad_id) REFERENCES salads (id)
+      )
+    ''');
+
     for (final salad in fakeSalads) {
       await db.insert('salads', salad.toMap());
     }
