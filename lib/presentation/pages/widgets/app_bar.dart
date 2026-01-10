@@ -28,8 +28,8 @@ class FruitAbbBar extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 8,
+                    horizontal: 6,
+                    vertical: 6,
                   ),
                   child: Row(
                     children: [

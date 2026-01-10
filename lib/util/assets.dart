@@ -31,8 +31,7 @@ class _Images {
       '${Assets._baseImage}fruit_salad_quinoa.png';
   final String fruitSaladTropical =
       '${Assets._baseImage}fruit_salad_tropical.png';
-  final orderComplete = '${Assets._baseImage}order_complete.png';
-  final splashLogo = '${Assets._baseImage}splash_logo.png';
+  final String splashLogo = '${Assets._baseImage}splash_logo.png';
   final String orderComplete = '${Assets._baseImage}order_complete.png';
   final String orderTaken = '${Assets._baseImage}order_taken.png';
   final String orderDelivered = '${Assets._baseImage}order_delivered.png';
