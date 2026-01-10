@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_hub/util/colors.dart';
 
-import '../../util/assets.dart';
+import '../../../util/assets.dart';
 
 class OrderItem extends StatelessWidget {
   final String img;

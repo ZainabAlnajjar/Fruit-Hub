@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub/presentation/components/primary_button.dart';
+import 'package:fruit_hub/presentation/pages/widgets/primary_button.dart';
 
 import '../../util/assets.dart';
 import '../../util/colors.dart';
@@ -14,58 +14,61 @@ class OnBoardingPage1 extends StatelessWidget {
     final media = MediaQuery.of(context);
     final height = media.size.height;
     return Scaffold(
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            height: height / 1.8,
-            color: FruitColor.orangeColor,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right:70),
-                  child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Image.asset(Assets.image.fruitDrops),
-                  ),
-                ),
-                Image.asset(Assets.image.fruitBasketPage1, fit: BoxFit.contain),
-                SizedBox(height: 8),
-                Image.asset(Assets.image.fruitBasketPageShadow)
-              ],
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(24, 56, 24, 16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Get The Freshest Fruit Salad Combo",
-                  style: TextStyle(
-                    color: FruitColor.navyBlueColor,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                SizedBox(height: 8),
-                  Text(
-                    "We deliver the best and freshest fruit salad in town. Order for a combo today!!!",
-                    style: TextStyle(
-                      color: FruitColor.lightNavyBlueColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: height / 1.8,
+              color: FruitColor.orangeColor,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right:70),
+                    child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Image.asset(Assets.image.fruitDrops),
                     ),
                   ),
-                SizedBox(height: 58),
-                FruitPrimaryButton(buttonText: "Let’s Continue",isFullWidth: true, onPressed:(){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingPage2()));
-                })
-              ],
+                  Image.asset(Assets.image.fruitBasketPage1, fit: BoxFit.contain),
+                  SizedBox(height: 8),
+                  Image.asset(Assets.image.fruitBasketPageShadow)
+                ],
+              ),
             ),
-          ),
-        ],
+            Padding(
+              padding: EdgeInsets.fromLTRB(24, 56, 24, 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Get The Freshest Fruit Salad Combo",
+                    style: TextStyle(
+                      color: FruitColor.navyBlueColor,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                    Text(
+                      "We deliver the best and freshest fruit salad in town. Order for a combo today!!!",
+                      style: TextStyle(
+                        color: FruitColor.lightNavyBlueColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  SizedBox(height: 58),
+                  FruitPrimaryButton(buttonText: "Let’s Continue",isFullWidth: true, onPressed:(){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoardingPage2()));
+                  })
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

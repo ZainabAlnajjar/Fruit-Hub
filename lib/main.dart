@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub/presentation/pages/on_boarding_page1.dart';
 
-void main() {
+import 'di/injection.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initDI();
   runApp(const MyApp());
 }
 
@@ -17,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "brandonGrotesque",
       ),
-      home: OnBoardingPage1(),
+      home: const OnBoardingPage1(),
     );
   }
 }

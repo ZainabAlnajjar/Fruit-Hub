@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../util/colors.dart';
+import '../../../util/colors.dart';
+
 
 class FruitPrimaryButton extends StatelessWidget {
   final String buttonText;
@@ -25,7 +26,7 @@ class FruitPrimaryButton extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 18, horizontal: 32),
+          padding: EdgeInsets.symmetric(vertical: 18),
           child: Text(
             buttonText,
             style: TextStyle(
