@@ -4,16 +4,16 @@ import 'package:fruit_hub/util/assets.dart';
 import 'package:fruit_hub/util/colors.dart';
 
 class GoBackButton extends StatelessWidget {
-  const GoBackButton({super.key});
+  final VoidCallback? onTap;
+
+  const GoBackButton({super.key, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerLeft,
       child: GestureDetector(
-        onTap: () {
-          // TODO
-        },
+        onTap: onTap ?? () => Navigator.of(context).pop(),
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 8,

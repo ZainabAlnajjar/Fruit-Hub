@@ -2,21 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/util/colors.dart';
 
 class PriceRow extends StatelessWidget {
+  final int quantity;
+  final int price;
+  final VoidCallback onDecrease;
+  final VoidCallback onIncrease;
+
   const PriceRow({
     super.key,
+    required this.quantity,
+    required this.price,
+    required this.onDecrease,
+    required this.onIncrease,
   });
+
+  String _formatPrice(int price) {
+    return price.toString().replaceAllMapped(
+      RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+      (Match m) => '${m[1]},',
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
+    final totalPrice = price * quantity;
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
           children: [
             GestureDetector(
-              onTap: () {
-                // TODO
-              },
+              onTap: onDecrease,
               child: Container(
                 width: 32,
                 height: 32,
@@ -36,7 +52,7 @@ class PriceRow extends StatelessWidget {
             ),
             const SizedBox(width: 24),
             Text(
-              '1',
+              '$quantity',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w400,
@@ -45,9 +61,7 @@ class PriceRow extends StatelessWidget {
             ),
             const SizedBox(width: 24),
             GestureDetector(
-              onTap: () {
-                // TODO
-              },
+              onTap: onIncrease,
               child: Container(
                 width: 32,
                 height: 32,
@@ -64,9 +78,8 @@ class PriceRow extends StatelessWidget {
             ),
           ],
         ),
-    
         Text(
-          '₦ 2,000',
+          '₦ ${_formatPrice(totalPrice)}',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w500,

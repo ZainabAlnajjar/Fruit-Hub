@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:fruit_hub/util/colors.dart';
 
 class ActionRow extends StatelessWidget {
+  final bool isFavorite;
+  final VoidCallback onFavoriteToggle;
+  final VoidCallback onAddToBasket;
+
   const ActionRow({
     super.key,
+    required this.isFavorite,
+    required this.onFavoriteToggle,
+    required this.onAddToBasket,
   });
 
   @override
@@ -13,9 +20,7 @@ class ActionRow extends StatelessWidget {
       child: Row(
         children: [
           GestureDetector(
-            onTap: () {
-              // TODO
-            },
+            onTap: onFavoriteToggle,
             child: Container(
               width: 48,
               height: 48,
@@ -24,7 +29,7 @@ class ActionRow extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Icon(
-                Icons.favorite_border,
+                isFavorite ? Icons.favorite : Icons.favorite_border,
                 color: FruitColor.orangeColor,
                 size: 24,
               ),
@@ -33,9 +38,7 @@ class ActionRow extends StatelessWidget {
           const SizedBox(width: 60),
           Expanded(
             child: GestureDetector(
-              onTap: () {
-                // TODO
-              },
+              onTap: onAddToBasket,
               child: Container(
                 height: 56,
                 decoration: BoxDecoration(
