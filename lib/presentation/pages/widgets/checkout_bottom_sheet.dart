@@ -75,9 +75,7 @@ class CheckOutBottomSheet extends StatelessWidget {
                         children: [
                           FruitOutlinedButton(
                             buttonText: "Pay on delivery",
-                            onPressed: () {
-                              context.read<OrderListCubit>().deleteCart();
-
+                            onPressed: () async {
                               Navigator.pop(context);
                               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OrderCompleteScreen()));
                             },

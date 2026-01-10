@@ -4,15 +4,12 @@ abstract class OrderListState {}
 
 final class OrderListInitial extends OrderListState {}
 
-final class OrderListLoading extends OrderListState{
-  bool loading = true;
-  OrderListLoading({required this.loading});
-}
+final class OrderListLoading extends OrderListState{}
 
 final class OrderListLoaded extends OrderListState{
 
-  final List<CartItem> cartItems;
-  final num totalPrice;
+  final List<Cart> cartItems;
+  final int totalPrice;
   OrderListLoaded({required this.cartItems, required this.totalPrice});
 }
 

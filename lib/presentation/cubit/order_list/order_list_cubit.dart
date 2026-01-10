@@ -1,37 +1,30 @@
-import 'package:bloc/bloc.dart';
-import 'package:fruit_hub/domain/models/cart.dart';
-import 'package:fruit_hub/domain/models/cart_item.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_hub/domain/repository/basket_repository.dart';
 
-import '../../../domain/repository/salad_repository.dart';
+import '../../../domain/models/cart.dart';
+
 
 part 'order_list_state.dart';
 
 class OrderListCubit extends Cubit<OrderListState> {
-  final SaladRepository repository;
+  final BasketRepository repository;
 
   OrderListCubit({required this.repository}) : super(OrderListInitial());
 
   Future<void> loadCartItems() async{
+    emit(OrderListLoading());
+    int totalPrice = 0;
     try{
-      final cartItems = await repository.getCartItems();
-      emit(OrderListLoaded(cartItems: cartItems.cartItem??[], totalPrice: cartItems.totalPrice??0));
-      emit(OrderListLoading(loading: false));
-
-      print(cartItems);
+      final cartItemsList = await repository.getBasketItemsWithDetails();
+      for (var item in cartItemsList) {
+        totalPrice += item.salad.price * item.quantity;
+      }
+      emit(OrderListLoaded(cartItems: cartItemsList, totalPrice: totalPrice));
 
     }catch(e){
-      emit(OrderListLoading(loading: false));
       emit(OrderListError(message: e.toString()));
     }
 
   }
 
-  Future<void> deleteCart() async{
-    try{
-      await repository.deleteCart();
-      emit(OrderListLoaded(cartItems: [], totalPrice: 0));
-    }catch(e){
-      emit(OrderListError(message: e.toString()));
-    }
-  }
 }

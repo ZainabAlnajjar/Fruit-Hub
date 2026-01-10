@@ -1,4 +1,3 @@
-import 'package:fruit_hub/domain/models/salad.dart';
 
 import '../../domain/models/basket_item.dart';
 import '../../domain/models/cart.dart';
@@ -42,12 +41,6 @@ class BasketRepositoryImpl implements BasketRepository {
     final db = await database.database;
     final result = await db.query('basket');
     return result.map((map) => BasketItem.fromMap(map)).toList();
-  }
-
-  @override
-  Future<void> deleteCart()async {
-   final db = await database.database;
-   await db.delete('basket');
   }
 
   @override

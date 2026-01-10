@@ -114,7 +114,6 @@ class CardPaymentBottomSheet extends StatelessWidget {
                         child: FruitPrimaryButton(
                           buttonText: "Complete Order",
                           onPressed: () {
-                            context.read<OrderListCubit>().deleteCart();
                             Navigator.pop(context);
                           },
                         ),

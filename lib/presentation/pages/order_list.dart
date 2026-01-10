@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -19,7 +20,7 @@ class OrderListScreen extends StatelessWidget {
     final cubit = getIt<OrderListCubit>();
 
     return BlocProvider<OrderListCubit>(
-      create: (context) => cubit..loadCartItems,
+      create: (context) => cubit..loadCartItems(),
       child: Scaffold(
         backgroundColor: Colors.white,
         body: BlocBuilder<OrderListCubit, OrderListState>(
@@ -64,11 +65,11 @@ class OrderListContent extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               return OrderItem(
-                img: state.cartItems[index].image,
-                name: state.cartItems[index].name,
-                price: state.cartItems[index].price.toString(),
+                img: state.cartItems[index].salad.image,
+                name: state.cartItems[index].salad.name,
+                price: state.cartItems[index].salad.price.toString(),
                 quantity: state.cartItems[index].quantity.toString(),
-                backgroundColor:Color(state.cartItems[index].color),
+                backgroundColor:Color(state.cartItems[index].salad.color??0),
               );
             },
           ),
