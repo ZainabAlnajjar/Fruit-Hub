@@ -32,6 +32,7 @@ class _Images {
   final String fruitSaladTropical =
       '${Assets._baseImage}fruit_salad_tropical.png';
   final orderComplete = '${Assets._baseImage}order_complete.png';
+  final splashLogo = '${Assets._baseImage}splash_logo.png';
 }
 
 
