@@ -119,7 +119,7 @@ class HomeContent extends StatelessWidget {
                 );
               },
               onPlusClick: () {
-                //   TODO: Add to basket
+                context.read<HomeCubit>().addToCart(salad.id!, 1);
               },
             ),
           ),
@@ -140,7 +140,7 @@ class HomeContent extends StatelessWidget {
                 );
               },
               onPlusClick: () {
-                //   TODO: Add to basket
+                context.read<HomeCubit>().addToCart(salad.id!, 1);
               },
             ),
           ),

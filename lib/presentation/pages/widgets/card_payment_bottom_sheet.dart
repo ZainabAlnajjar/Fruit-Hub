@@ -111,7 +111,9 @@ class CardPaymentBottomSheet extends StatelessWidget {
                         width: double.infinity,
                         child: FruitPrimaryButton(
                           buttonText: "Complete Order",
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                         ),
                       ),
                     ],

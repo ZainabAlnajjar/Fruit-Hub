@@ -1,5 +1,5 @@
-import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
 import '../fake_data.dart';
 
@@ -19,11 +19,7 @@ class FruitHupDatabase {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, 'fruit_hup.db');
 
-    return await openDatabase(
-      path,
-      version: 1,
-      onCreate: _onCreate,
-    );
+    return await openDatabase(path, version: 2, onCreate: _onCreate);
   }
 
   Future<void> _onCreate(Database db, int version) async {

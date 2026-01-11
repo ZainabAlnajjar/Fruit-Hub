@@ -1,3 +1,4 @@
+
 import '../../../domain/models/salad.dart';
 import '../../domain/models/salad_categories.dart';
 import '../database/database.dart';
